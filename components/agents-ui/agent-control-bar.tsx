@@ -126,7 +126,7 @@ function AgentChatInput({ chatOpen, onSend = async () => {}, className }: AgentC
         variant={isDisabled ? 'secondary' : 'default'}
         title={isSending ? 'Sending...' : 'Send'}
         onClick={handleButtonClick}
-        className="self-end disabled:cursor-not-allowed cursor-pointer"
+        className="cursor-pointer self-end disabled:cursor-not-allowed"
       >
         {isSending ? <Loader className="animate-spin" /> : <SendHorizontal />}
       </Button>
@@ -288,7 +288,7 @@ export function AgentControlBar({
     <div
       aria-label="Voice assistant controls"
       className={cn(
-        'bg-background shadow-xs border-input/50 dark:border-muted flex flex-col border p-3 drop-shadow-md/3',
+        'bg-background border-input/50 dark:border-muted flex flex-col border p-3 shadow-xs drop-shadow-md/3',
         variant === 'livekit' ? 'rounded-[31px]' : 'rounded-lg',
         className
       )}
@@ -347,7 +347,7 @@ export function AgentControlBar({
               className={cn(
                 variant === 'livekit' && [
                   LK_TOGGLE_VARIANT_1,
-                  'rounded-full [&_button:first-child]:rounded-l-full [&_button:last-child]:rounded-r-full cursor-pointer',
+                  'cursor-pointer rounded-full [&_button:first-child]:rounded-l-full [&_button:last-child]:rounded-r-full',
                 ]
               )}
             />
@@ -362,7 +362,9 @@ export function AgentControlBar({
               pressed={screenShareToggle.enabled}
               disabled={screenShareToggle.pending}
               onPressedChange={screenShareToggle.toggle}
-              className={cn(variant === 'livekit' && [LK_TOGGLE_VARIANT_2, 'rounded-full cursor-pointer'])}
+              className={cn(
+                variant === 'livekit' && [LK_TOGGLE_VARIANT_2, 'cursor-pointer rounded-full']
+              )}
             />
           )}
 
@@ -378,7 +380,9 @@ export function AgentControlBar({
               }}
               className={agentTrackToggleVariants({
                 variant: variant === 'outline' ? 'outline' : 'default',
-                className: cn(variant === 'livekit' && [LK_TOGGLE_VARIANT_2, 'rounded-full cursor-pointer']),
+                className: cn(
+                  variant === 'livekit' && [LK_TOGGLE_VARIANT_2, 'cursor-pointer rounded-full']
+                ),
               })}
             >
               <MessageSquareTextIcon />
@@ -393,7 +397,7 @@ export function AgentControlBar({
             disabled={!isConnected}
             className={cn(
               variant === 'livekit' &&
-                'bg-destructive/10 cursor-pointer dark:bg-destructive/10 text-destructive hover:bg-destructive/20 dark:hover:bg-destructive/20 focus:bg-destructive/20 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/4 rounded-full font-mono text-xs font-bold tracking-wider'
+                'bg-destructive/10 dark:bg-destructive/10 text-destructive hover:bg-destructive/20 dark:hover:bg-destructive/20 focus:bg-destructive/20 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/4 cursor-pointer rounded-full font-mono text-xs font-bold tracking-wider'
             )}
           >
             <span className="hidden uppercase md:inline">End call</span>

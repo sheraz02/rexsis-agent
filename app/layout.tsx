@@ -1,76 +1,76 @@
+import { Metadata } from 'next';
+import { Fraunces, Manrope } from 'next/font/google';
+import Link from 'next/link';
 import { ThemeProvider } from '@/components/app/theme-provider';
 import { ThemeToggle } from '@/components/app/theme-toggle';
 import '@/styles/globals.css';
-import { Fraunces, Manrope } from "next/font/google";
-import Link from 'next/link';
-import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://rexsis.com"),
+  metadataBase: new URL('https://rexsis.com'),
 
   title: {
-    default: "Rexsis — Practice talking, out loud",
-    template: "%s — Rexsis",
+    default: 'Rexsis — Practice talking, out loud',
+    template: '%s — Rexsis',
   },
 
   description:
-    "Rexsis is an AI speaking coach you talk to, out loud. Have real voice conversations, get focused feedback, and practice until talking feels easier.",
+    'Rexsis is an AI speaking coach you talk to, out loud. Have real voice conversations, get focused feedback, and practice until talking feels easier.',
 
-  applicationName: "Rexsis",
+  applicationName: 'Rexsis',
 
   keywords: [
-    "Rexsis",
-    "AI speaking coach",
-    "AI conversation practice",
-    "speaking practice",
-    "communication skills",
-    "English speaking practice",
-    "voice AI",
+    'Rexsis',
+    'AI speaking coach',
+    'AI conversation practice',
+    'speaking practice',
+    'communication skills',
+    'English speaking practice',
+    'voice AI',
   ],
 
   authors: [
     {
-      name: "Rexsis",
-      url: "https://rexsis.com",
+      name: 'Rexsis',
+      url: 'https://rexsis.com',
     },
   ],
 
-  creator: "Rexsis",
-  publisher: "Rexsis",
+  creator: 'Rexsis',
+  publisher: 'Rexsis',
 
   alternates: {
-    canonical: "https://rexsis.com",
+    canonical: 'https://rexsis.com',
   },
 
   icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
   },
 
   openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://rexsis.com",
-    siteName: "Rexsis",
-    title: "Rexsis — Practice talking, out loud",
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://rexsis.com',
+    siteName: 'Rexsis',
+    title: 'Rexsis — Practice talking, out loud',
     description:
-      "Talk with an AI speaking coach, get focused feedback, and try again until talking feels easier.",
+      'Talk with an AI speaking coach, get focused feedback, and try again until talking feels easier.',
     images: [
       {
-        url: "/open-graph.png",
+        url: '/open-graph.png',
         width: 1200,
         height: 630,
-        alt: "Rexsis — Practice talking, out loud",
+        alt: 'Rexsis — Practice talking, out loud',
       },
     ],
   },
 
   twitter: {
-    card: "summary_large_image",
-    title: "Rexsis — Practice talking, out loud",
+    card: 'summary_large_image',
+    title: 'Rexsis — Practice talking, out loud',
     description:
-      "Talk with an AI speaking coach, get focused feedback, and try again until talking feels easier.",
-    images: ["/open-graph.png"],
+      'Talk with an AI speaking coach, get focused feedback, and try again until talking feels easier.',
+    images: ['/open-graph.png'],
   },
 
   robots: {
@@ -79,29 +79,27 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      "max-image-preview": "large",
-      "max-video-preview": -1,
-      "max-snippet": -1,
+      'max-image-preview': 'large',
+      'max-video-preview': -1,
+      'max-snippet': -1,
     },
   },
 };
 
-
 const display = Fraunces({
-  subsets: ["latin"],
-  weight: ["400"],
-  style: ["normal"],
-  variable: "--font-display",
-  display: "swap",
+  subsets: ['latin'],
+  weight: ['400'],
+  style: ['normal'],
+  variable: '--font-display',
+  display: 'swap',
 });
 
 const sans = Manrope({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-sans",
-  display: "swap",
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  variable: '--font-sans',
+  display: 'swap',
 });
-
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -109,11 +107,7 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className={`${display.variable} ${sans.variable}`}
-    >
+    <html lang="en" suppressHydrationWarning className={`${display.variable} ${sans.variable}`}>
       <head>
         <title>LiveKit Voice Agent</title>
         <meta name="description" content="A voice agent built with LiveKit" />

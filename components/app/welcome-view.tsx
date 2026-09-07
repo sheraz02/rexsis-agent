@@ -1,5 +1,6 @@
-import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+
 function WelcomeImage() {
   return (
     <svg
@@ -40,7 +41,7 @@ export const WelcomeView = ({
         <Button
           size="lg"
           onClick={onStartCall}
-          className="mt-6 w-64 rounded-full font-mono text-xs font-bold tracking-wider uppercase cursor-pointer"
+          className="mt-6 w-64 cursor-pointer rounded-full font-mono text-xs font-bold tracking-wider uppercase"
         >
           {startButtonText}
         </Button>
@@ -48,8 +49,7 @@ export const WelcomeView = ({
 
       <div className="fixed bottom-5 left-0 flex w-full items-center justify-center">
         <p className="text-muted-foreground max-w-prose pt-1 text-xs leading-5 font-normal text-pretty md:text-sm">
-          By using Rexsis you agree to our
-          {' '}
+          By using Rexsis you agree to our{' '}
           <Link
             target="_blank"
             rel="noopener noreferrer"

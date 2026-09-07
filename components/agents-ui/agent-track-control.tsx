@@ -162,7 +162,11 @@ function TrackDeviceSelect({
       </SelectTrigger>
       <SelectContent position="popper">
         {devices.map((device) => (
-          <SelectItem key={device.deviceId} value={device.deviceId} className="font-mono text-xs cursor-pointer">
+          <SelectItem
+            key={device.deviceId}
+            value={device.deviceId}
+            className="cursor-pointer font-mono text-xs"
+          >
             {device.label}
           </SelectItem>
         ))}
@@ -309,7 +313,7 @@ export function AgentTrackControl({
             barCount={3}
             state={resolvedPressed ? 'speaking' : 'disconnected'}
             audioTrack={resolvedPressed ? audioTrack : undefined}
-            className="audiovisualizer flex h-6 w-auto items-center justify-center gap-0.5 cursor-pointer"
+            className="audiovisualizer flex h-6 w-auto cursor-pointer items-center justify-center gap-0.5"
           >
             <span
               className={cn([

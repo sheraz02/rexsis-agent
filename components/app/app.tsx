@@ -9,7 +9,6 @@ import { StartAudioButton } from '@/components/agents-ui/start-audio-button';
 import { ViewController } from '@/components/app/view-controller';
 import { Toaster } from '@/components/ui/sonner';
 
-
 interface AppProps {
   agentName?: string;
 }
